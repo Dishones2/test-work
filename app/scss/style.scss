@@ -1,0 +1,413 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+.header {
+    border-bottom: 1px solid #d9d9d9;
+    padding      : 35px 5px 30px;
+
+    &__nav {
+        position: relative;
+    }
+
+    &__menu {
+        display        : flex;
+        justify-content: center;
+    }
+
+    &__menu-item+&__menu-item {
+        margin-left: 75px;
+    }
+
+    &__menu-link {
+        font-size: 14px;
+        color    : #435993;
+
+        &:hover {
+            color: #1c1c1c
+        }
+    }
+
+    &__nav-btn {
+        display        : none;
+        width          : 25px;
+        height         : 20px;
+        margin-left    : 20px;
+        flex-direction : column;
+        justify-content: space-between;
+        cursor         : pointer;
+
+        span {
+            width           : 100%;
+            height          : 2px;
+            background-color: #1c1c1c;
+            transform-origin: left;
+            transition      : all .3s;
+
+        }
+
+        &--close {
+            span {
+
+                &:first-child {
+                    transform: rotate(45deg)
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(-100%);
+                    opacity  : 0;
+                    height   : 0;
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg)
+                }
+            }
+        }
+    }
+}
+
+.form {
+    text-align    : center;
+    padding-bottom: 74px;
+
+    &__icon {
+        margin-bottom: 30px;
+
+        &-img {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-size  : 30px;
+        font-weight: 300;
+    }
+
+    &__items {
+        margin: 48px 0 73px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__input,
+    .jq-selectbox__select {
+        font-size    : 20px;
+        font-weight  : 400;
+        display      : block;
+        margin       : 0 auto 25px;
+        padding      : 28px 10px 12px;
+        border       : 1px solid #d9d9d9;
+        border-radius: 4px;
+        text-align   : center;
+    }
+
+    .jq-selectbox__select {
+        padding: 20px 10px;
+    }
+
+    &__label {
+        position  : absolute;
+        color     : #c8c8c8;
+        font-size : 14px;
+        top       : 7px;
+        right     : 0;
+        left      : 0;
+        transition: all .3s;
+        cursor    : text;
+    }
+
+    &__input {
+        max-width: 520px;
+        width    : 100%;
+        outline  : none;
+
+        &--empty+label {
+            font-size: 24px;
+            top      : 20px;
+        }
+
+        &:focus {
+            border-color: #435993;
+        }
+
+        &:focus+label {
+            font-size: 14px;
+            top      : 7px;
+        }
+    }
+
+    &__input-checkbox {
+        position     : absolute;
+        left         : 0;
+        top          : -3px;
+        width        : 20px;
+        height       : 20px;
+        border       : 1px solid #435993;
+        border-radius: 2px;
+        cursor       : pointer;
+
+        &:hover {
+            background-color: #e9efff;
+        }
+
+        &.checked {
+            background-color: #435993;
+
+            .jq-checkbox__div {
+                background-image : url(../images/check.svg);
+                background-repeat: no-repeat;
+                background-size  : contain;
+                width            : 12px;
+                height           : 8px;
+                margin-top       : 5px;
+                margin-left      : 3px;
+            }
+        }
+    }
+
+    &__boxes {
+        display  : flex;
+        flex-wrap: wrap;
+        margin   : 54px 0 117px;
+    }
+
+    &__box {
+        margin-right: 91px;
+
+        &:first-child {
+            margin-right: 118px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__box-item {
+        font-size    : 16px;
+        font-weight  : 400;
+        position     : relative;
+        text-align   : left;
+        padding-left : 32px;
+        margin-bottom: 17px;
+    }
+
+
+    &__range {
+        position: relative;
+        margin  : 86px 0 89px;
+    }
+
+    &__range-line {
+        position        : absolute;
+        height          : 13px;
+        width           : 100%;
+        z-index         : 5;
+        top             : 11px;
+        transform-origin: right bottom;
+        transform       : rotate(-.8deg);
+        background-color: #fff;
+    }
+
+    &__text {
+        max-width: 510px;
+        margin   : 22px auto 39px;
+    }
+
+    &__textarea {
+        max-width    : 520px;
+        width        : 100%;
+        height       : 180px;
+        resize       : none;
+        font-size    : 20px;
+        font-weight  : 400;
+        padding      : 24px 20px;
+        border       : 1px solid #d9d9d9;
+        border-radius: 4px;
+        margin-bottom: 70px;
+
+        &::placeholder {
+            font-size: 24px;
+            color    : #c8c8c8;
+        }
+    }
+
+    &__btn {
+        width           : 115px;
+        height          : 50px;
+        display         : block;
+        margin          : 0 auto;
+        background-color: #435993;
+        border          : none;
+        border-radius   : 10px;
+        color           : #fff;
+        cursor          : pointer;
+        transition      : all .3s;
+
+        &:hover {
+            background-color: #283863;
+        }
+    }
+}
+
+.jq-selectbox {
+
+    &__select {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    &__select-text {
+        width: 100% !important;
+
+        &.placeholder {
+            font-size: 24px;
+            color    : #c8c8c8
+        }
+    }
+
+    &__trigger-arrow {
+        position         : absolute;
+        background-image : url('../images/arrow.svg');
+        width            : 13px;
+        height           : 8px;
+        right            : 20px;
+        top              : 29px;
+        background-repeat: no-repeat;
+        background-size  : contain;
+        cursor           : pointer;
+        transition       : all .3s;
+    }
+
+    &.opened {
+        .jq-selectbox__trigger-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__dropdown {
+        width           : 100%;
+        color           : #435993;
+        font-size       : 20px;
+        font-weight     : 300;
+        max-height      : 361px;
+        padding         : 36px 6px 32px;
+        top             : 67px !important;
+        border-radius   : 5px;
+        background-color: #fff;
+        box-shadow      : 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+
+        ul {
+            max-height: 232px !important;
+            overflow-y: scroll;
+        }
+
+        li {
+            margin-bottom: 16px;
+            cursor       : pointer;
+            transition   : all .3s;
+
+            &:hover {
+                color: #1c1c1c
+            }
+        }
+
+    }
+}
+
+.irs {
+    background-color: #fff;
+}
+
+.irs--flat {
+    .irs-line {
+        border-radius: 0px;
+        width        : 99%;
+        height       : 14px;
+        z-index      : 4;
+    }
+
+    .irs-bar {
+        background: linear-gradient(to right, rgb(204, 177, 241) 0%, rgb(67, 89, 147) 100%);
+        height    : 14px;
+        z-index   : 4;
+    }
+
+    .irs-handle {
+        top   : 50px;
+        height: 0;
+
+        &.state-hover {
+            &>i:first-child {
+                background-color : transparent;
+            }
+        }
+
+        &>i:first-child {
+            background-image : url(../images/range.svg);
+            background-color : transparent;
+            background-repeat: no-repeat;
+            background-size  : contain;
+            width            : 23px;
+            height           : 26px;
+            cursor           : pointer;
+            left             : -3px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+
+    }
+
+    .irs-grid-text {
+        color: #2e211c;
+    }
+
+}
+
+.irs-grid {
+    top    : -15px;
+    z-index: 7;
+}
+
+.irs-grid-text {
+    font-family: 'Roboto', sans-serif;
+    font-size  : 13px;
+    line-height: 19px;
+    font-weight: 400;
+    margin-left: 0 !important;
+    max-width  : 186px;
+    white-space: normal;
+    text-align : left;
+
+}
+
+.irs-grid-pol {
+    top   : 32px;
+    height: 23px;
+
+    &.small {
+        display: none;
+    }
+}
+
+.js-grid-text {
+    &-3 {
+        visibility: hidden !important;
+    }
+
+    &-4 {
+        left: 78.9% !important;
+    }
+}
+
+@import 'media';
