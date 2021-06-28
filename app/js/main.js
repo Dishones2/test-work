@@ -39,4 +39,9 @@ $(function () {
         }
     });
 
+    $('.header__menu-link').on('click', function() {
+        $('.header__nav-btn').removeClass('header__nav-btn--close');
+        $('.header__menu').removeClass('header__menu--active');
+    })
+
 })
