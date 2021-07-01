@@ -23,22 +23,22 @@
                     </div>
                     <ul class="header__menu">
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#self" >
+                            <a class="header__menu-link" href="#self">
                                 Личная информация
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#exp" >
+                            <a class="header__menu-link" href="#exp">
                                 Опыт
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#js" >
+                            <a class="header__menu-link" href="#js">
                                 JavaScript
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#about" >
+                            <a class="header__menu-link" href="#about">
                                 О себе
                             </a>
                         </li>
@@ -65,7 +65,7 @@
                     <div class="form__items">
 
                         <div class="form__item">
-                            <input class="form__input" id="name" type="text">
+                            <input class="form__input" id="name" type="text" value="Калачёв Андрей">
                             <label class="form__label" for="name">ФИО</label>
                         </div>
                         <div class="form__item">
@@ -75,7 +75,7 @@
                                 <option value="">1999</option>
                                 <option value="">1998</option>
                                 <option value="">1997</option>
-                                <option value="">1996</option>
+                                <option value="" selected>1996</option>
                                 <option value="">1995</option>
                                 <option value="">1994</option>
                                 <option value="">1993</option>
@@ -95,7 +95,7 @@
                             </select>
                         </div>
                         <div class="form__item">
-                            <input class="form__input" id="city" type="text">
+                            <input class="form__input" id="city" type="text" value="г.Алматы">
                             <label class="form__label" for="city">Место проживания</label>
                         </div>
                         <div class="form__item">
@@ -103,7 +103,7 @@
                             <label class="form__label" for="Skype">Skype</label>
                         </div>
                         <div class="form__item">
-                            <input class="form__input" id="mail" type="email">
+                            <input class="form__input" id="mail" type="email" value="andrej13524@gmail.com">
                             <label class="form__label" for="mail">E-mail</label>
                         </div>
                     </div>
@@ -121,44 +121,62 @@
 
                         <div class="form__box">
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="BEM" type="checkbox">
-                                <label for="BEM">БЭМ/OOCSS</label>
+                                <label class="form__input-label">
+                                    БЭМ/OOCSS
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="SCSS" type="checkbox">
-                                <label for="SCSS">Stylus/LESS/SASS</label> 
+                                <label class="form__input-label">
+                                    Stylus/LESS/SASS
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="SVG" type="checkbox">
-                                <label for="SVG">Работаю с SVG</label> 
-                            </div>
-                        </div>
-                        <div class="form__box">
-                            <div class="form__box-item">
-                                <input class="form__input-checkbox" id="Semantic" type="checkbox">
-                                <label for="Semantic">Верстаю семантично</label>
-                            </div>
-                            <div class="form__box-item">
-                                <input class="form__input-checkbox" id="ES" type="checkbox">
-                                <label for="ES">ES2015/ES2016</label>
-                            </div>
-                            <div class="form__box-item">
-                                <input class="form__input-checkbox" id="Gulp" type="checkbox">
-                                <label for="Gulp">Gulp/GRUNT</label> 
+                                <label class="form__input-label">
+                                    Работаю с SVG
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                         </div>
                         <div class="form__box">
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="Webpack" type="checkbox">
-                                <label for="Webpack">Webpack</label> 
+                                <label class="form__input-label">
+                                    Верстаю семантично
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="jQuery" type="checkbox">
-                                <label for="jQuery">jQuery</label> 
+                                <label class="form__input-label">
+                                    ES2015/ES2016
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                             <div class="form__box-item">
-                                <input class="form__input-checkbox" id="Git" type="checkbox">
-                                <label for="Git">Использую Git</label> 
+                                <label class="form__input-label">
+                                    Gulp/GRUNT
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__box">
+                            <div class="form__box-item">
+                                <label class="form__input-label">
+                                    Webpack
+                                    <input class="form__input-checkbox" type="checkbox">
+                                </label>
+                            </div>
+                            <div class="form__box-item">
+                                <label class="form__input-label">
+                                    jQuery
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
+                            </div>
+                            <div class="form__box-item">
+                                <label class="form__input-label">
+                                    Использую Git
+                                    <input class="form__input-checkbox" type="checkbox" checked>
+                                </label>
                             </div>
                         </div>
 
